@@ -63,12 +63,13 @@ img{
     width: 200px;
     height: 200px;
     transition: 1s ease-in-out;
+    transform-origin: right left;
 }
  .one>img:hover{
-    transform: translatex(-100%);
+    transform: translatex(-200%);
 }
 .one:hover{
-    transform: translatex(50%);
+    transform: translatex(100%);
 }
 .wraper:hover{
     transform: translatey(50%);
@@ -135,4 +136,53 @@ img{
 }
 .inner-containt:hover{
     transform: scale(1.2);
+}
+.skew{
+    margin-top: 50px;
+}
+.main-skew{
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+    margin:auto;
+    transition: 1s;
+}
+.main-skew:hover{
+    transform: skew(60deg, 60deg) rotate(50deg);
+}
+/*2D Cube */
+.transform-origen{
+    
+    background-color: rgb(5, 16, 48);
+    /* height: 600px; */
+}
+.origin-container{
+   height: 700px;
+   position: relative;
+}
+.child-origin-1{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+   height: 100px;
+   width: 100px;
+   background-color: pink;
+   transition: 1s;
+   transform-origin: top center;
+}
+.child-origin-2{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+   height: 100px;
+   width: 100px;
+   background-color: rgb(255, 8, 140);
+   transition: 1s;
+   transform-origin: top center;
+}
+.child-origin-1:hover{
+   transform: translate(50%);
+}
+.child-origin-2:hover{
+    transform: rotate(50deg);
 }
